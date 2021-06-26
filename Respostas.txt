@@ -1,0 +1,114 @@
+// Atividade Avaliativa 
+
+// 1. O que é o ES6? 
+
+// R: ECMAScript é a especificação usada para implementar a linguagem JavaScript e o ES6 ou ECMAScript6 é a sexta versão da padronização JS 
+// criada em 1997 e nasceu com o objetivo de tornar a linguagem mais acessível e versátil, alem disso tambem foi a primeira atualização 
+// significativa para a linguagem desde o ES5 ja quue as versoes anterioreis nao trouxeram mudancas significativas.
+
+//2. Exemplifique algumas features introduzidas no ES6.
+//                                                                            Para executar os exemplos so descomentar o " /* ", " */ "
+/* 
+//==========================================================================================================================================
+map: Cria um array contendo o mesmo número de elementos de um determinado array e os elementos do array criado são definidos por uma 
+função, ou seja, converte o array original em outro 
+
+//exemplo pratico:
+
+var nomes = ['cris', 'rafa', 'mateus']
+
+function transferenciaNome(val) {
+    return val.toUpperCase()
+}
+
+var nomes2 = nomes.map(transferenciaNome)
+
+console.log(nomes2)
+
+//==========================================================================================================================================
+filter: Cria um array contendo um subconjunto dos elementos do array original. O subconjunto de elementos do novo array é determinado por 
+uma função que retorna true ou false quando verifica uma determinada condição para cada elemento do array original.
+
+//exemplo pratico:
+
+var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+function maiorQue5(val) {
+    return val > 5
+}
+
+var numerosMaiorQ5 = numeros.filter(maiorQue5)
+
+console.log(numerosMaiorQ5)
+
+//==========================================================================================================================================
+forEach: Executa uma função para cada um dos elementos de um array. O argumento dessa função helper é cada um dos elementos do array.
+
+var nomes = ['cris', 'rafa', 'mateus']
+
+function print(val) {
+  console.log(val)
+}
+
+nomes.forEach(print)
+
+//==========================================================================================================================================
+*/
+//3. Qual a diferença entre var, let e const?
+
+/* O let é bem parecido com o var, aonde podemos instanciar e armazenar qualquer tipo de objeto nelas e quando utilizamos o let os seus 
+valores podem ser sobrescritos, até mesmo por outros tipos de dados 
+
+ja o const também funciona de forma análoga aos demais, entretanto, 
+uma vez que o valor foi atribuído à variável, ele não pode ser modificado.
+
+uma grande  diferença é que tanto o let quanto o const tem escopo de bloco. Ou seja, uma mesma referência só existe enquanto 
+estiver dentro de um bloco var é funcional até hoje apesar de ser mais velhor porem usar ele não é recomendada pois tem opções 
+melhores como o let e const onde se evita alguns dos problemas do JavaScript alem de gerar mais segurança e legibilidade ao código.*/
+
+//4. O que é destructuring e para quais propósitos pode ser utilizado?
+
+/*Destructuring é basicamente quebrar uma estrutura complexa em partes mais simples.considerando como estrutura complexa sendo um array ou 
+um objeto, alem de que o destructuring pode ser usado tanto para declarar variáveis quanto para atribuir valores a variáveis.*/
+
+//5. O que é o DOM?
+
+/*
+O DOM ou Modelo de Objeto de Documento é uma interface de programação para documentos HTML, XML e SVG aonde ele fornece uma representação 
+estruturada do documento como uma árvore, e define métodos que permitem acesso à árvore, para que eles possam alterar a estrutura, estilo e 
+conteúdo do documento. 
+
+ELe tambem oferece uma representação do documento como um grupo estruturado de "nós" e objetos, possuindo várias propriedades e métodos. 
+Os "nós" também podem ter manipuladores de eventos que lhe são inerentes, e uma vez que um evento é acionado, os manipuladores de eventos 
+são executados. Essencialmente, ele conecta páginas web a scripts ou linguagens de programação. lembrando que o DOM não é uma parte da 
+linguagem JavaScript ou seja também pode ser acessado por outras linguagens.
+
+
+*/
+//6. Quais problemas o JavaScript assíncrono soluciona?
+
+/*um dos problemas que o JavaScript assincrono soluciona é que em um código síncrono, todas as funções e requisições trabalham em sincronia, 
+em um contato direto, do início ao fim da comunicação cessa maneira, esse código só permite uma requisição por vez já em uma requisição 
+assíncrona é ela não trabalha em sincronia dessa forma, nós podemos realizar várias requisições ao mesmo tempo, e uma requisição não irá 
+afetar a outra. Ou seja com um código assíncrono, o site se torna mais dinâmico e menos monotono para o usuario.
+*/
+//7. Para que servem os comandos async e await?
+
+
+/*com esses 2 comandos é possível escrever código assíncrono como se estivesse escrevendo um código síncrono, A proposta das funções 
+async/await é de simplificar o uso de forma síncrona das Promises e executar alguns procedimentos em um grupo, async/awai eles são similares 
+à junção de generators  obs. o await so e possivel utilizar em uma funcao com o assync dentro*/
+
+//8. Quais as vantagens de se usar Promises ao invés de callbacks?
+
+
+/*Uma Promise é um objeto que representa a eventual conclusão ou falha de uma operação assincrona, Essencialmente, uma promise é um objeto 
+retornado para o qual você adiciona callbacks, em vez de passar callbacks para uma função, ao contrário dos callbacks com retornos de 
+funções old-style, uma promisse tem algumas garantias como: 
+
+Callbacks nunca serão chamados antes da conclusão da execução atual do loop de eventos do JavaScript. 
+Callbacks adicionadas com .then mesmo depois do sucesso ou falha da operação assincrona, serão chamadas, como acima.
+Multiplos callbacks podem ser adicionados chamando-se .then várias vezes, para serem executados independentemente da ordem de inserção.
+
+Mas o benefício mais imediato da promises é o encadeamento onde  o retorno da declaração é uma variável, o que torna o processo de  
+encadeamento de handlers muito mais simples permitindo, por exemplo, avaliações em cascata. */
